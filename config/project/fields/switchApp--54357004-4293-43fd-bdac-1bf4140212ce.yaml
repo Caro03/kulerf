@@ -1,0 +1,13 @@
+contentColumnType: boolean
+fieldGroup: c454a233-b093-42df-9623-e466fed410f0 # Walk Detail
+handle: switchApp
+instructions: 'Is dit een wandeling met de app?'
+name: 'Switch App'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

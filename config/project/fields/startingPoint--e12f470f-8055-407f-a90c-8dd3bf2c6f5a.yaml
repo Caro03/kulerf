@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: c454a233-b093-42df-9623-e466fed410f0 # Walk Detail
+handle: startingPoint
+instructions: ''
+name: 'Starting Point'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
