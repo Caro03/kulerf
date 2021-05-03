@@ -1,16 +1,43 @@
 {% extends "_layout" %}
 
-{% set breadcrumbs = entry.ancestors().all()|merge([entry]) %}
-
 {% block content %}
 
-    <div class="section section--default">
-        <div class="container">
-            <div class="w-full md:w-3/4">
-                {% include '_snippet/_content/_pageTitle' %}
-                {% include '_snippet/_content/_intro' %}
-            </div>
-        </div>
-    </div>
+	<div class="text-white bg-center bg-cover hero js-bg-target">
+		<div class="w-1/2 px-10 py-10 bg-primary-hover">
+			<div class="section section--default">
+				<div class="container">
+					{% block breadcrumbs %}
+						<div class="mb-10">
+							{% include '_snippet/_nav/_breadcrumb' %}
+						</div>
+					{% endblock %}
+
+					{% if entry.switchApp == 1 %}
+						<div class="mb-10">
+							<span class="px-5 py-2 text-xs uppercase rounded-full bg-light">{{ 'Wandeling met app'|t }}</span>
+						</div>
+					{% endif %}
+					{% include '_snippet/_content/_pageTitle' %}
+					<div class="mb-2">
+						<svg class="w-5 h-5 mr-2 text-white icon" aria-hidden="true">
+							<use xlink:href="/icon/sprite.svg#clock"></use>
+						</svg>
+						{{ 'Duurtijd:'|t }}
+						{{ entry.duration }}
+						({{ entry.distance }})
+					</div>
+					<div class="mb-5">
+						<svg class="w-5 h-5 mr-2 text-white icon" aria-hidden="true">
+							<use xlink:href="/icon/sprite.svg#place"></use>
+						</svg>
+						{{ 'Vertrekpunt:'|t }}
+						{{ entry.startingPoint }}
+					</div>
+					{% include '_snippet/_content/_intro' %}
+					{% include '_snippet/_item/_walkDetail' %}
+				</div>
+			</div>
+		</div>
+	</div>
 
 {% endblock %}

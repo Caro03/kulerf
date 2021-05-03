@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 54457e18-21e3-4699-9428-aeb45c2aee5f # Hero image
+            fieldUid: a44287f8-d6ed-4f2c-8a63-0c1312ef236e # Image
             instructions: null
             label: null
             required: false
