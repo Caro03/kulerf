@@ -12,9 +12,9 @@ const siteColors = {
     hoverContrast: "#ffffff",
   },
   secondary: {
-    default: "#00ff00",
+    default: "#EDEDED",
     contrast: "#ffffff",
-    hover: "#00ff00",
+    hover: "#EDEDED",
     hoverContrast: "#ffffff",
   },
 };

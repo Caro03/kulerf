@@ -11,7 +11,7 @@
     </div>
     <div class="section section--default">
         <div class="container">
-            {% set walks = craft.entries.section('walkDetail').all() %}
+            {% set walks = craft.entries.section('walk').all() %}
             {% for walk in walks %}
                 <a href="{{ walk.url }}">hallo</a>
             {% endfor %}
