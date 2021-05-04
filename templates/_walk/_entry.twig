@@ -23,58 +23,20 @@
 	<div class="section section--default">
 		<div class="container">
 			<div class="flex flex-wrap -mx-4">
-				<div class="w-full h-full mx-4 md:w-1/3">
-					<div class="bg-secondary">
-						{% if craft.app.request.getQueryParam('gids') == 1 %}
-							{% for gids in gidsen %}
-								{% if gids.switchApp == 1 %}
-									<div class="bg-cover aspect-ratio-16/9 js-bg-target">
-										<img src="{{ gids.image.one().url }}" alt="" class="js-bg-src"/>
-									</div>
-									<div class="p-4">
-										<h2>{{ gids.title }}</h2>
-										<div class="mb-1 text-sm font-accent">
-											{{ 'Duurtijd:'|t }}
-											{{ gids.duration }}
-											-
-											{{ 'Afstand:'|t }}
-											{{ gids.distance }}
-										</div>
-										{% if gids.switchGroup == 1 %}
-											<div class="text-sm font-accent">{{ 'Enkel voor groepen - op aanvraag'|t }}</div>
-										{% endif %}
-										<div class="mt-5 mb-3">{{ gids.intro }}</div>
-										<a class="link link-primary link--ext" href="{{ gids.url }}">{{ 'Wandeling bekijken'|t }}</a>
-									</div>
-								{% endif %}
-							{% endfor %}
-
-						{% else %}
-							{% for gids in gidsen %}
-								{% if gids.switchApp == 0 %}
-									<div class="bg-cover aspect-ratio-16/9 js-bg-target">
-										<img src="{{ gids.image.one().url }}" alt="" class="js-bg-src"/>
-									</div>
-									<div class="p-4">
-										<h2>{{ gids.title }}</h2>
-										<div class="mb-1 text-sm font-accent">
-											{{ 'Duurtijd:'|t }}
-											{{ gids.duration }}
-											-
-											{{ 'Afstand:'|t }}
-											{{ gids.distance }}
-										</div>
-										{% if gids.switchGroup == 1 %}
-											<div class="text-sm font-accent">{{ 'Enkel voor groepen - op aanvraag'|t }}</div>
-										{% endif %}
-										<div class="mt-5 mb-3">{{ gids.intro }}</div>
-										<a class="link link-primary link--ext" href="{{ gids.url }}">{{ 'Wandeling bekijken'|t }}</a>
-									</div>
-								{% endif %}
-							{% endfor %}
+				{% if craft.app.request.getQueryParam('gids') == 1 %}
+					{% for gids in gidsen %}
+						{% if gids.switchApp == 1 %}
+							{% include '_snippet/_item/_walk' %}
 						{% endif %}
-					</div>
-				</div>
+					{% endfor %}
+
+				{% else %}
+					{% for gids in gidsen %}
+						{% if gids.switchApp == 0 %}
+							{% include '_snippet/_item/_walk' %}
+						{% endif %}
+					{% endfor %}
+				{% endif %}
 			</div>
 		</div>
 	</div>

@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: f0617c18-e8cb-4727-b0ba-ade9d8ba7f51 # Categories
+handle: monumenten
+instructions: ''
+name: Monumenten
+searchable: false
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: false
+  source: 'group:087f40c0-46cd-4915-b2ee-38a006216019' # Monumenten
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories
