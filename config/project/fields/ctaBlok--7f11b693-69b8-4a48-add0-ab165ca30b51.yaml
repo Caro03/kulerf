@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 895d440c-e43b-455a-b217-08098648535f # Monument Detail
+handle: ctaBlok
+instructions: ''
+name: 'CTA Blok'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_ctablok}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

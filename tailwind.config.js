@@ -48,7 +48,7 @@ module.exports = {
       ...defaultTheme.colors,
       ...siteColors,
       black: "#333333",
-      light: "#285D86",
+      light: "#EBEBEB",
       gray: {
         ...defaultTheme.colors.gray,
         100: "#f5f5f5",
@@ -80,7 +80,15 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    textColor: ['responsive', 'hover', 'focus', 'active'],
+    borderColor: ['responsive', 'hover', 'focus', 'active'],
+    borderOpacity: ['responsive', 'hover', 'focus', 'active'],
+    borderRadius: ['responsive', 'active'],
+    borderStyle: ['responsive', 'active'],
+    borderWidth: ['responsive', 'active'],
+    backgroundColor: ['responsive', 'hover', 'focus', 'active'],
+  },
   plugins: [
     colorShade(siteColors),
     // underlineAnimation,

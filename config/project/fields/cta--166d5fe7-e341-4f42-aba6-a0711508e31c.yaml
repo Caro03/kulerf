@@ -1,0 +1,62 @@
+contentColumnType: text
+fieldGroup: 895d440c-e43b-455a-b217-08098648535f # Monument Detail
+handle: cta
+instructions: ''
+name: CTA
+searchable: false
+settings:
+  allowClass: '1'
+  allowCustomText: '1'
+  allowTarget: ''
+  allowedLinkNames: '*'
+  class: null
+  classes: null
+  defaultLinkName: entry
+  defaultText: ''
+  typeSettings:
+    __assoc__:
+      -
+        - asset
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+      -
+        - category
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+      -
+        - entry
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+      -
+        - email
+        -
+          __assoc__:
+            -
+              - disableValidation
+              - ''
+      -
+        - tel
+        -
+          __assoc__:
+            -
+              - disableValidation
+              - ''
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - disableValidation
+              - ''
+translationKeyFormat: null
+translationMethod: none
+type: statikbe\cta\fields\CTAField

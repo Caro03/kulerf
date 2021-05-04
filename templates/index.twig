@@ -13,7 +13,12 @@
         <div class="container">
             {% set walks = craft.entries.section('walk').all() %}
             {% for walk in walks %}
-                <a href="{{ walk.url }}">hallo</a>
+                <a href="{{ walk.url }}">walk</a>
+            {% endfor %}
+
+            {% set monument = craft.entries.section('monumentDetail').all() %}
+            {% for monu in monument %}
+                <a href="{{ monu.url }}">monu</a>
             {% endfor %}
         </div>
     </div>

@@ -1,8 +1,10 @@
 <div class="w-full {% if settings.centered is not defined %}md:w-8/12{% endif %}">
 	<blockquote>
-		{{ block.text }}
+		<div class="text-xl font-accent text-primary-hover">
+			{{ block.text }}
+		</div>
 		{% if block.writer|length %}
-			<footer class="mt-4">{{ block.writer }}</footer>
+			<footer class="mt-4 text-primary">- {{ block.writer }}</footer>
 		{% endif %}
 	</blockquote>
 	{% if block.cta|length %}

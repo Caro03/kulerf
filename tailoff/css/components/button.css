@@ -59,7 +59,7 @@
   }
 
   &--ghost {
-    @apply no-underline bg-transparent text-primary border-primary;
+    @apply text-white no-underline bg-transparent border-white;
 
     &:hover {
       @apply text-white no-underline bg-primary-hover border-primary-hover;
