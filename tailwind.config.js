@@ -8,11 +8,11 @@ const siteColors = {
   primary: {
     default: "#08A7EB",
     contrast: "#ffffff",
-    hover: "#004070",
+    hover: "#285D86",
     hoverContrast: "#ffffff",
   },
   secondary: {
-    default: "#EDEDED",
+    default: "#004070",
     contrast: "#ffffff",
     hover: "#EDEDED",
     hoverContrast: "#ffffff",

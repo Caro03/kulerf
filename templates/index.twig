@@ -16,7 +16,7 @@
                 <a href="{{ walk.url }}">walk</a>
             {% endfor %}
 
-            {% set monument = craft.entries.section('monumentDetail').all() %}
+            {% set monument = craft.entries.section('monument').all() %}
             {% for monu in monument %}
                 <a href="{{ monu.url }}">monu</a>
             {% endfor %}

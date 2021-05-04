@@ -1,0 +1,46 @@
+{% extends "_layout" %}
+
+{% block content %}
+
+	<div class="section section--default">
+		<div class="container">
+			<div class="w-full md:w-3/4">
+				{% include '_snippet/_content/_pageTitle' %}
+				{% include '_snippet/_content/_intro' %}
+			</div>
+		</div>
+	</div>
+
+	<div class="section section--default">
+		<div class="container">
+			{% set monument = craft.entries.section('monumentDetail').all() %}
+			<a class="mr-5 font-bold uppercase" href="{{ entry.url }}">{{ 'Alfabetisch weergeven'|t }}</a>
+			<a class="font-bold uppercase active:text-primary active:border-b-4" href="/monument?monument=1">{{ 'Weergeven op kaart'|t }}</a>
+			<div class="mt-5 border-b-2 border-gray-500"></div>
+		</div>
+	</div>
+
+	<div class="section section--default">
+		<div class="container">
+			<div class="md:-mx-4 md:flex md:flex-wrap">
+				{% if craft.app.request.getQueryParam('monument') == 1 %}
+					{% for monu in monument %}
+						{% if monu.switchApp == 1 %}
+							<div class="w8/12">
+								<div class="w-64 h-64 js-google-map" data-locations='[{ "lat": 50.882170, "lng": 4.702510, "info": "Statik" }, { "lat": 50.881401, "lng": 4.715916, "info": "Station" }]' data-options="{}"></div>
+							</div>
+						{% endif %}
+					{% endfor %}
+
+				{% else %}
+					{% for monu in monument|sort %}
+						{% if monu.switchApp == 0 %}
+							{% include '_snippet/_item/_monument' %}
+						{% endif %}
+					{% endfor %}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

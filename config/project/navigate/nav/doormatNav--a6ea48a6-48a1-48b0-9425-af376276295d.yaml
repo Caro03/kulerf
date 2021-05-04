@@ -1,0 +1,6 @@
+adminOnly: 1
+allowSources: '*'
+enabledSiteGroups: '*'
+handle: doormatNav
+levels: 1
+title: DoormatNav
