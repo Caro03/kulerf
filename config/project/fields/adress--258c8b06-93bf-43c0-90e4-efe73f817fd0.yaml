@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 0694c524-e625-4d95-a630-e9ffea8cca6a # Bezoek Detail
+handle: adress
+instructions: ''
+name: Adress
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

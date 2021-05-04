@@ -20,6 +20,11 @@
             {% for monu in monument %}
                 <a href="{{ monu.url }}">monu</a>
             {% endfor %}
+
+            {% set bezoeken = craft.entries.section('bezoekDetail').all() %}
+            {% for bezoek in bezoeken %}
+                <a href="{{ bezoek.url }}">bezoek</a>
+            {% endfor %}
         </div>
     </div>
 

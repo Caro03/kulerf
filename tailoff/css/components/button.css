@@ -75,10 +75,10 @@
   }
 
   &--link {
-    @apply no-underline bg-transparent border-transparent text-primary;
+    @apply text-white underline bg-transparent border-transparent;
 
     &:hover {
-      @apply text-black no-underline bg-white border-white;
+      @apply no-underline;
     }
   }
 }

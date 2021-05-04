@@ -1,0 +1,140 @@
+field: bd245948-a483-4908-acb3-4a42d7e226e2 # Groepsbezoeken
+fieldLayouts:
+  a1fcb059-5cd2-43e1-8c2e-9c3f9cfe6d13:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 6df59801-459b-456f-b767-b08270991056 # Titel
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4e2f8a51-7287-442d-954e-a89ae2c9237f # Info
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 112418b3-43c3-45cb-8b74-c6acafba298e # linkit
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  4e2f8a51-7287-442d-954e-a89ae2c9237f: # Info
+    contentColumnType: text
+    fieldGroup: null
+    handle: info
+    instructions: ''
+    name: Info
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  6df59801-459b-456f-b767-b08270991056: # Titel
+    contentColumnType: text
+    fieldGroup: null
+    handle: titel
+    instructions: ''
+    name: Titel
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  112418b3-43c3-45cb-8b74-c6acafba298e: # linkit
+    contentColumnType: text
+    fieldGroup: null
+    handle: linkit
+    instructions: ''
+    name: linkit
+    searchable: false
+    settings:
+      allowClass: '1'
+      allowCustomText: '1'
+      allowTarget: ''
+      allowedLinkNames: '*'
+      class: null
+      classes: null
+      defaultLinkName: asset
+      defaultText: ''
+      typeSettings:
+        __assoc__:
+          -
+            - asset
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - category
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - entry
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+          -
+            - email
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+          -
+            - tel
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+          -
+            - url
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: statikbe\cta\fields\CTAField
+handle: groepsbezoeken
+name: Groepsbezoeken
+sortOrder: 1

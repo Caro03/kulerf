@@ -10,7 +10,7 @@
 				{% else %}
 					<li class="my-2 {% if node.classes|length %}{{ node.classes }}{% endif %}">
 						<a href="{{ node.url }}" class="text-primary underline hover:no-underline{% if node.active %}active underline{% endif %}" {% if node.blank %} target="_blank" rel="noopener" {% endif %}>
-							<svg class="w-5 h-5 mr-2 text-primary icon" aria-hidden="true">
+							<svg class="w-5 h-5 text-primary icon" aria-hidden="true">
 								<use xlink:href="/icon/sprite.svg#chevron-right"></use>
 							</svg>
 							{{ node.name }}

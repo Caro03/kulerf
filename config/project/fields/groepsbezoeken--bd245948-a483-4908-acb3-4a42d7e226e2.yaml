@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 0694c524-e625-4d95-a630-e9ffea8cca6a # Bezoek Detail
+handle: groepsbezoeken
+instructions: ''
+name: Groepsbezoeken
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_groepsbezoeken}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
