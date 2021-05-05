@@ -1,0 +1,38 @@
+{% extends "_layout" %}
+
+{% block content %}
+
+	<div class="section section--default">
+		<div class="container">
+			<div class="w-full md:w-3/4">
+				{% include '_snippet/_content/_pageTitle' %}
+				{% include '_snippet/_content/_intro' %}
+			</div>
+		</div>
+	</div>
+
+	<div class="section section--default">
+		<div class="container">
+			{% set count = 0 %}
+			{% set verhalen = craft.entries.section('verhalenDetail').all() %}
+			<div class="md:flex md:space-x-5">
+				{% for verhaal in verhalen %}
+					{% set count = count +1 %}
+					<div class="{% if count is odd %}md:w-1/4 {% else %}md:w-3/4{% endif %}">
+						<img src="{{ verhaal.image.one().url }}">
+						<div class="px-5 py-5 bg-light">
+							<div class="h-full">
+								<h2 class="text-xl uppercase">{{ verhaal.title }}</h2>
+								<div class="mb-5">
+									{{ verhaal.intro }}
+								</div>
+								<a class="btn btn--primary" href="{{ verhaal.url }}">{{ 'Verhaal lezen'|t }}</a>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
