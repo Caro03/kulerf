@@ -8,7 +8,7 @@
 			<img src="{{ optimizedImage.placeholderBox() }}" data-srcset="{{ optimizedImage.srcset() }}" sizes="(max-width: 479px) 94vw, (min-width: 480px) and (max-width: 659px) 431px, (min-width: 660px) and (max-width: 819px) 214px, (min-width: 820px) and (max-width: 979px) 252px, (min-width: 980px) and (max-width: 1199px) 327px, (min-width: 1200px) 395px" alt="{{ monu.image|first.imageCaption ?? monu.image|first.title ?? entry.title }}" class="lazyload"/>
 		</picture>
 		<div class="p-4">
-			<h2>{{ monu.title }}</h2>
+			<h2 class="text-xl uppercase">{{ monu.title }}</h2>
 			<div class="mt-5 mb-3">{{ monu.intro }}</div>
 			<a class="link link-primary link--ext" href="{{ monu.url }}">{{ 'Monument bekijken'|t }}</a>
 		</div>

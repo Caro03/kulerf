@@ -18,4 +18,17 @@
         container: 'container',
     }
         } %}
+
+	<div class="section section--default">
+		<div class="container">
+			<h2 class="text-xl uppercase">{{ 'Nu te bezoeken'|t }}</h2>
+			<div class="md:-mx-4 md:flex md:flex-wrap">
+				{% set bezoeken = craft.entries.section('bezoekDetail').limit(3) %}
+				{% for bezoek in bezoeken|sort %}
+					{% include '_snippet/_item/_bezoek' %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
 {% endblock %}

@@ -17,6 +17,9 @@ const siteColors = {
     hover: "#EDEDED",
     hoverContrast: "#ffffff",
   },
+  tertiair: {
+    default: "#333333",
+  }
 };
 
 module.exports = {
@@ -28,6 +31,7 @@ module.exports = {
       1: "1px",
       2: "2px",
       3: "3px",
+      4: "5px",
     },
     container: {
       center: true,
