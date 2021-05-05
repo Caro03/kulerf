@@ -21,13 +21,11 @@
 					<div class="{% if count is odd %}md:w-1/4 {% else %}md:w-3/4{% endif %}">
 						<img src="{{ verhaal.image.one().url }}">
 						<div class="px-5 py-5 bg-light">
-							<div class="h-full">
-								<h2 class="text-xl uppercase">{{ verhaal.title }}</h2>
-								<div class="mb-5">
-									{{ verhaal.intro }}
-								</div>
-								<a class="btn btn--primary" href="{{ verhaal.url }}">{{ 'Verhaal lezen'|t }}</a>
+							<h2 class="text-xl uppercase">{{ verhaal.title }}</h2>
+							<div class="mb-5">
+								{{ verhaal.intro }}
 							</div>
+							<a class="btn btn--primary" href="{{ verhaal.url }}">{{ 'Verhaal lezen'|t }}</a>
 						</div>
 					</div>
 				{% endfor %}
