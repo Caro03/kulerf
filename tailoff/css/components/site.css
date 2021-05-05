@@ -8,4 +8,9 @@
     color: black;
 }
 
+.quote {
+    top: 1.5em;
+    left: 4em;
+}
+
 /* purgecss end ignore */

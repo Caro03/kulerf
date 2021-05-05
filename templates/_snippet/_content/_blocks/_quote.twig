@@ -1,11 +1,19 @@
-<div class="w-full {% if settings.centered is not defined %}md:w-8/12{% endif %}">
+<div class="w-full md:mb-5 {% if settings.centered is not defined %}md:w-8/12{% endif %}">
 	<blockquote>
-		<div class="text-xl font-accent text-primary-hover">
-			{{ block.text }}
+		<div class="md:relative">
+			<svg class="hidden w-32 h-32 mr-2 md:block text-light icon" aria-hidden="true">
+				<use xlink:href="/icon/sprite.svg#quote"></use>
+			</svg>
+			<div class="md:absolute quote">
+				<div class="text-2xl font-accent text-primary-hover">
+					{{ block.text }}
+				</div>
+				{% if block.writer|length %}
+					<footer class="mt-4 text-primary">-
+						{{ block.writer }}</footer>
+				{% endif %}
+			</div>
 		</div>
-		{% if block.writer|length %}
-			<footer class="mt-4 text-primary">- {{ block.writer }}</footer>
-		{% endif %}
 	</blockquote>
 	{% if block.cta|length %}
 		<div class="inline">

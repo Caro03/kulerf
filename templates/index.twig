@@ -20,6 +20,11 @@
             {% for collectie in collecties %}
                 <a href="{{ collectie.url }}">coll</a>
             {% endfor %}
+
+            {% set verhalen = craft.entries.section('verhalenDetail').all() %}
+            {% for verhaal in verhalen %}
+                <a href="{{ verhaal.url }}">verhaal</a>
+            {% endfor %}
         </div>
     </div>
 
