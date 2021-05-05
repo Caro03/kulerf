@@ -16,14 +16,9 @@
                 <a href="{{ walk.url }}">walk</a>
             {% endfor %}
 
-            {% set monument = craft.entries.section('monument').all() %}
-            {% for monu in monument %}
-                <a href="{{ monu.url }}">monu</a>
-            {% endfor %}
-
-            {% set bezoeken = craft.entries.section('bezoekDetail').all() %}
-            {% for bezoek in bezoeken %}
-                <a href="{{ bezoek.url }}">bezoek</a>
+            {% set collecties = craft.entries.section('collectieDetail').all() %}
+            {% for collectie in collecties %}
+                <a href="{{ collectie.url }}">coll</a>
             {% endfor %}
         </div>
     </div>

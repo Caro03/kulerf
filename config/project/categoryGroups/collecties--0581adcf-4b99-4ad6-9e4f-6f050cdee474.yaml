@@ -1,0 +1,48 @@
+fieldLayouts:
+  d8a6159e-04c2-48d7-813d-a7bc422cdf3e:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: collecties
+name: Collecties
+siteSettings:
+  6de046f0-6167-4af1-aa91-ffaf83e36a14: # NL
+    hasUrls: false
+    template: null
+    uriFormat: null
+  e57cf13b-f9cb-484a-8093-a897fa43eb68: # EN
+    hasUrls: false
+    template: null
+    uriFormat: null
+  fd2014b7-5bc0-49a9-ac30-e009081532f7: # FR
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: e789eec8-19d3-4834-9a0c-c963d5cb4993

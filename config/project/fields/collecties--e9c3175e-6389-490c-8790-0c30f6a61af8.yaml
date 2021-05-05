@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: f0617c18-e8cb-4727-b0ba-ade9d8ba7f51 # Categories
+handle: collecties
+instructions: ''
+name: Collecties
+searchable: false
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: ''
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: false
+  source: 'group:0581adcf-4b99-4ad6-9e4f-6f050cdee474' # Collecties
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

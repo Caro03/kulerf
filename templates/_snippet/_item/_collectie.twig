@@ -1,0 +1,16 @@
+<div class="w-full mb-5 md:w-1/3 md:mx-4 md:mb-0">
+	<div class="h-full bg-light">
+		{% set optimizedImage = collectie.image|first.optimizedOverview %}
+		<picture>
+			{% if craft.imageOptimize.serverSupportsWebP() and collectie.image|first.extension != 'svg' %}
+				<source data-srcset="{{ optimizedImage.srcsetWebP() }}" sizes="(max-width: 479px) 99vw, (min-width: 480px) and (max-width: 659px) 431px, (min-width: 660px) and (max-width: 819px) 214px, (min-width: 820px) and (max-width: 979px) 252px, (min-width: 980px) and (max-width: 1199px) 327px, (min-width: 1200px) 395px" type="image/webp"/>
+			{% endif %}
+			<img src="{{ optimizedImage.placeholderBox() }}" data-srcset="{{ optimizedImage.srcset() }}" sizes="(max-width: 479px) 94vw, (min-width: 480px) and (max-width: 659px) 431px, (min-width: 660px) and (max-width: 819px) 214px, (min-width: 820px) and (max-width: 979px) 252px, (min-width: 980px) and (max-width: 1199px) 327px, (min-width: 1200px) 395px" alt="{{ collectie.image|first.imageCaption ?? collectie.image|first.title ?? entry.title }}" class="lazyload"/>
+		</picture>
+		<div class="p-4">
+			<h2 class="text-xl uppercase">{{ collectie.title }}</h2>
+			<div class="mt-5 mb-3">{{ collectie.intro }}</div>
+			<a class="link link-primary link--ext" href="{{ collectie.url }}">{{ 'Monument bekijken'|t }}</a>
+		</div>
+	</div>
+</div>

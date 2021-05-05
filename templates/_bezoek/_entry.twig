@@ -19,16 +19,31 @@
     }
         } %}
 
-	<div class="section section--default">
-		<div class="container">
-			<h2 class="text-xl uppercase">{{ 'Nu te bezoeken'|t }}</h2>
-			<div class="md:-mx-4 md:flex md:flex-wrap">
-				{% set bezoeken = craft.entries.section('bezoekDetail').limit(3) %}
-				{% for bezoek in bezoeken|sort %}
-					{% include '_snippet/_item/_bezoek' %}
-				{% endfor %}
+	{% set bezoeken = craft.entries.section('bezoekDetail') %}
+	{% paginate bezoeken.limit(2) as load1PageInfo, load1Entries %}
+
+		<div class="section section--default" id="loader1">
+			<div class="container">
+				<h2 class="text-xl uppercase">{{ 'Nu te bezoeken'|t }}</h2>
+				<div class="md:-mx-4 md:flex js-pagination-container">
+					{% for bezoek in load1Entries %}
+						{% include '_snippet/_item/_bezoek' %}
+					{% endfor %}
+				</div>
+				<div class="flex justify-center mt-8 js-pagination">
+					<div class="hidden js-pagination-loader">
+						{% include '_snippet/_item/_loader' %}
+						<div class="mt-2 italic opacity-50">{{ "Meer monumenten & collecties aan het laden"|t }}</div>
+					</div>
+					{% if load1PageInfo.nextUrl %}
+						<a href="{{ load1PageInfo.nextUrl }}" class="italic js-load-more" data-load-wrapper="loader1">{{ "Toon meer"|t }}
+							<svg class="w-6 h-6 ml-1 icon" aria-hidden="true">
+								<use xlink:href="/icon/sprite.svg#sync"></use>
+							</svg>
+						</a>
+					{% endif %}
+				</div>
 			</div>
 		</div>
-	</div>
 
-{% endblock %}
+	{% endblock %}
