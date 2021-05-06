@@ -25,7 +25,7 @@
 		<div class="section section--default" id="loader1">
 			<div class="container">
 				<h2 class="text-xl uppercase">{{ 'Nu te bezoeken'|t }}</h2>
-				<div class="md:-mx-4 md:flex js-pagination-container">
+				<div class="md:-mx-4 md:flex md:flex-wrap js-pagination-container">
 					{% for bezoek in load1Entries %}
 						{% include '_snippet/_item/_bezoek' %}
 					{% endfor %}
