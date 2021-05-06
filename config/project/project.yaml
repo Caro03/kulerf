@@ -1,4 +1,4 @@
-dateModified: 1620224492
+dateModified: 1620306099
 email:
   fromEmail: no-reply@mailer.today
   fromName: $SYSTEM_NAME
@@ -26,6 +26,17 @@ plugins:
     licenseKey: null
     schemaVersion: 1.0.0
     settings: null
+  easy-address-field:
+    edition: standard
+    enabled: true
+    licenseKey: VCJ2W54P2GUMNHSA5GG85143
+    schemaVersion: 1.0.0
+    settings:
+      defaultMapTheme: silver
+      defaultMarkerColor: '#08A7EB'
+      defaultMarkerIcon: ''
+      googleApiKey: null
+      googleApiKeyNonGeo: AIzaSyAvDrfsXGKcKRaP-CMA005bmOq1XLdIydU
   expanded-singles:
     edition: standard
     enabled: true

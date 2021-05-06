@@ -20,8 +20,8 @@ new WebfontComponent([
 /**
  * Extra components
  */
-import { AjaxSearchComponent } from "./components/ajaxSearch.component";
-new AjaxSearchComponent();
+//import { AjaxSearchComponent } from "./components/ajaxSearch.component";
+//new AjaxSearchComponent();
 
 import { AutocompleteComponent } from "./components/autocomplete.component";
 new AutocompleteComponent();
@@ -48,8 +48,8 @@ new formOtherRadioComponent();
 import { GlideComponent } from "./components/glide.component";
 new GlideComponent();
 
-import { GoogleMapsComponent } from "./components/googleMaps.component";
-new GoogleMapsComponent();
+import { MapsComponent } from "./components/googleMaps.component";
+new MapsComponent();
 
 import { IndeterminateChecksComponent } from "./components/indeterminateChecks.component";
 new IndeterminateChecksComponent();

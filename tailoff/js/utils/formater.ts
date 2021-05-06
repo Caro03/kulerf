@@ -1,6 +1,5 @@
 export class Formatter {
   constructor() {}
-
   public static sprintf(string: string, parameters) {
     if ("object" === typeof parameters) {
       for (var i in parameters) string = this.sprintf(string, parameters[i]);
@@ -8,32 +7,20 @@ export class Formatter {
     }
     return "string" === typeof string ? string.replace(/%s/i, parameters) : "";
   }
-
-  public static parseTemplate(
-    template: string,
-    data: Array<any>,
-    delimiter = "%%"
-  ) {
-    const regexSearch = new RegExp(
-      delimiter + "([a-zA-z0-9.]+)" + delimiter,
-      "gi"
-    );
-    const regexReplace = new RegExp(delimiter, "gi");
-    const matches = template.match(regexSearch);
-    if (matches) {
-      matches.forEach((match) => {
-        const path = match.replace(regexReplace, "");
-        let value = data;
-        path.split(".").forEach((param) => {
-          if (value) {
-            value = value[param];
-          }
-        });
-        if (value) {
-          template = template.replace(match, value.toString());
-        }
-      });
+  public static serialize(obj, prefix?) {
+    let str = [],
+      p;
+    for (p in obj) {
+      if (obj.hasOwnProperty(p)) {
+        const k = prefix ? prefix + "[" + p + "]" : p,
+          v = obj[p];
+        str.push(
+          v !== null && typeof v === "object"
+            ? this.serialize(v, k)
+            : encodeURIComponent(k) + "=" + encodeURIComponent(v)
+        );
+      }
     }
-    return template;
+    return str.join("&");
   }
 }

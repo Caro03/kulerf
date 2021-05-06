@@ -24,14 +24,39 @@
 		<div class="container">
 			<div class="md:-mx-4 md:flex md:flex-wrap">
 				{% if craft.app.request.getQueryParam('monument') == 1 %}
-					{% for monu in monument %}
-						{% if monu.switchApp == 1 %}
-							<div class="w8/12">
-								<div class="w-64 h-64 js-google-map" data-locations='[{ "lat": 50.882170, "lng": 4.702510, "info": "Statik" }, { "lat": 50.881401, "lng": 4.715916, "info": "Station" }]' data-options="{}"></div>
-							</div>
-						{% endif %}
-					{% endfor %}
 
+					{% set mapsThumb = {
+						mode: 'crop',
+						width: 600,
+						height: 250,
+						quality: 80,
+						position: 'center'
+					} %}
+
+					{% set monumentsArray = [] %}
+					{% for monu in monument %}
+						{% set monumentsArray = monumentsArray|merge([{
+							lat: monu.adres.latitude,
+							lng: monu.adres.longitude,
+							address: [(monu.adres.street ~ ', ' ~ monu.adres.postalCode ~ ' ' ~ monu.adres.city)],
+							image: monu.image|first.getUrl(mapsThumb),
+							title: monu.title,
+							url: monu.getUrl(),
+							marker: 'marker.png',
+						},
+						]) %}
+					{% endfor %}
+					{% if monument|length %}
+						<div class="aspect-ratio-4/3 js-google-map" id="map-canvas" data-locations="{{ monumentsArray|json_encode }}"></div>
+						<script type="text/template" id="template-marker">
+							<img src="%s" width="300" class="lazyload"/>
+							<div class="p-6">
+								<h3 class="mb-1">%s</h3>
+								<div class="mb-4 text-gray-600">%s</div>
+								<a href="%s" class="text-base link link--ext">{{ 'Monument bekijken'|t }}</a>
+							</div>
+						</script>
+					{% endif %}
 				{% else %}
 					{% for monu in monument|sort %}
 						{% if monu.switchApp == 0 %}

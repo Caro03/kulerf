@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ea6bd311699e1f4090f8871e3639901b",
+    "content-hash": "6b46cf2e7944cdaa8b4c1a9bf92edfd3",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -927,6 +927,59 @@
             "time": "2020-06-29T00:56:53+00:00"
         },
         {
+            "name": "giggsey/locale",
+            "version": "1.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/giggsey/Locale.git",
+                "reference": "b07f1eace8072ccc61445ad8fbd493ff9d783043"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/giggsey/Locale/zipball/b07f1eace8072ccc61445ad8fbd493ff9d783043",
+                "reference": "b07f1eace8072ccc61445ad8fbd493ff9d783043",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "pear/pear-core-minimal": "^1.9",
+                "pear/pear_exception": "^1.0",
+                "pear/versioncontrol_git": "^0.5",
+                "phing/phing": "~2.7",
+                "php-coveralls/php-coveralls": "^1.0|^2.0",
+                "phpunit/phpunit": "^4.8|^5.0",
+                "symfony/console": "^2.8|^3.0|^4.0",
+                "symfony/filesystem": "^2.8|^3.0|^4.0",
+                "symfony/finder": "^2.8|^3.0|^4.0",
+                "symfony/process": "^2.8|^3.0|^4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Giggsey\\Locale\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joshua Gigg",
+                    "email": "giggsey@gmail.com",
+                    "homepage": "http://giggsey.com/"
+                }
+            ],
+            "description": "Locale functions required by libphonenumber-for-php",
+            "support": {
+                "issues": "https://github.com/giggsey/Locale/issues",
+                "source": "https://github.com/giggsey/Locale/tree/master"
+            },
+            "time": "2020-07-07T11:16:24+00:00"
+        },
+        {
             "name": "guzzlehttp/guzzle",
             "version": "7.3.0",
             "dist": {
@@ -1601,6 +1654,64 @@
             "time": "2020-08-23T07:39:11+00:00"
         },
         {
+            "name": "league/iso3166",
+            "version": "2.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/iso3166.git",
+                "reference": "aed3b32fc293afdf2c6c6a322c2408eb5d20804a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/iso3166/zipball/aed3b32fc293afdf2c6c6a322c2408eb5d20804a",
+                "reference": "aed3b32fc293afdf2c6c6a322c2408eb5d20804a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.12",
+                "phpunit/phpunit": "^5.7.11 || ^6.0 || ^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\ISO3166\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rob Bast",
+                    "email": "rob.bast@gmail.com"
+                }
+            ],
+            "description": "ISO 3166-1 PHP Library",
+            "homepage": "https://github.com/thephpleague/iso3166",
+            "keywords": [
+                "3166",
+                "3166-1",
+                "ISO 3166",
+                "countries",
+                "iso",
+                "library"
+            ],
+            "support": {
+                "issues": "https://github.com/thephpleague/iso3166/issues",
+                "source": "https://github.com/thephpleague/iso3166"
+            },
+            "time": "2020-01-29T07:08:12+00:00"
+        },
+        {
             "name": "league/mime-type-detection",
             "version": "1.7.0",
             "dist": {
@@ -1866,6 +1977,65 @@
                 "vector"
             ],
             "time": "2021-01-23T16:37:31+00:00"
+        },
+        {
+            "name": "maxh/php-nominatim",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maxhelias/php-nominatim.git",
+                "reference": "7bd5fd76fb87625dd52bb459cb89df2b06937dd7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maxhelias/php-nominatim/zipball/7bd5fd76fb87625dd52bb459cb89df2b06937dd7",
+                "reference": "7bd5fd76fb87625dd52bb459cb89df2b06937dd7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "guzzlehttp/guzzle": "@stable",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "dev-master",
+                "phpro/grumphp": "dev-master",
+                "phpunit/phpunit": "6.5.*",
+                "squizlabs/php_codesniffer": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "maxh\\Nominatim\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maxime Helias",
+                    "email": "maximehelias16@gmail.com",
+                    "homepage": "http://maximehelias.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Wrapper for Nominatim API",
+            "homepage": "https://github.com/maxhelias/php-nominatim",
+            "keywords": [
+                "geo",
+                "geolocation",
+                "nominatim",
+                "open street map",
+                "osm",
+                "web service"
+            ],
+            "support": {
+                "issues": "https://github.com/maxhelias/php-nominatim/issues",
+                "source": "https://github.com/maxhelias/php-nominatim/tree/master"
+            },
+            "time": "2018-08-27T08:58:26+00:00"
         },
         {
             "name": "mikehaertl/php-shellcommand",
@@ -3525,6 +3695,60 @@
                 "dumper"
             ],
             "time": "2019-06-20T10:52:28+00:00"
+        },
+        {
+            "name": "studioespresso/craft-easyaddressfield",
+            "version": "3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/studioespresso/craft3-easyaddressfield.git",
+                "reference": "3cc3e221f7312b64a52ebdabfd73030d76751de2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/studioespresso/craft3-easyaddressfield/zipball/3cc3e221f7312b64a52ebdabfd73030d76751de2",
+                "reference": "3cc3e221f7312b64a52ebdabfd73030d76751de2",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.3.0",
+                "giggsey/locale": "^1.0.0",
+                "league/iso3166": "^2.0",
+                "maxh/php-nominatim": "^2.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Easy Address Field",
+                "handle": "easy-address-field",
+                "class": "studioespresso\\easyaddressfield\\EasyAddressField"
+            },
+            "autoload": {
+                "psr-4": {
+                    "studioespresso\\easyaddressfield\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Studio Espresso",
+                    "homepage": "https://studioespresso.co"
+                }
+            ],
+            "description": "The only address field you need",
+            "keywords": [
+                "address",
+                "cms",
+                "craftcms",
+                "fieldtype",
+                "yii2"
+            ],
+            "support": {
+                "docs": "https://github.com/studioespresso/craft3-easyaddressfield/blob/master/README.MD",
+                "email": "support@studioespresso.co",
+                "issues": "https://github.com/studioespresso/craft3-easyaddressfield/issues",
+                "source": "https://github.com/studioespresso/craft3-easyaddressfield/tree/3.0.2"
+            },
+            "time": "2021-01-27T18:54:11+00:00"
         },
         {
             "name": "studioespresso/craft-navigate",

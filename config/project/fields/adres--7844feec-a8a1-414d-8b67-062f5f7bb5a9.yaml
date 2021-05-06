@@ -1,0 +1,19 @@
+contentColumnType: string
+fieldGroup: 0694c524-e625-4d95-a630-e9ffea8cca6a # Bezoek Detail
+handle: adres
+instructions: ''
+name: Adres
+searchable: false
+settings:
+  defaultCountry: BE
+  enabledFields:
+    __assoc__:
+      -
+        - country
+        - country
+  geoCode: '1'
+  hasContentColumn: false
+  showCoordinates: ''
+translationKeyFormat: null
+translationMethod: none
+type: studioespresso\easyaddressfield\fields\EasyAddressFieldField

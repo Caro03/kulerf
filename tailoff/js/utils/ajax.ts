@@ -1,6 +1,5 @@
 export class Ajax {
   constructor() {}
-
   public static call(options: Object = {}): XMLHttpRequest {
     const defaultOptions = {
       url: "",
@@ -16,10 +15,8 @@ export class Ajax {
     if (option.xhr) {
       option.xhr.abort();
     }
-
     option.xhr = new XMLHttpRequest();
     option.xhr.open(option.method, option.url, true);
-
     option.xhr.onload = function () {
       if (this.status >= 200 && this.status < 400) {
         if (option.success && typeof option.success == "function") {
@@ -36,25 +33,22 @@ export class Ajax {
         }
       }
     };
-
     option.xhr.onerror = function () {
       console.error("There was a connection error");
       if (option.error && typeof option.error == "function") {
         option.error();
       }
     };
-
     if (option.data || option.form) {
       let FD = new FormData();
       if (option.form) {
         FD = new FormData(option.form);
       }
       if (option.data) {
-        for (let key in option.data) {
+        for (const key in option.data) {
           FD.append(key, option.data[key]);
         }
       }
-
       option.xhr.send(FD);
     } else {
       option.xhr.send();

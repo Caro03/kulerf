@@ -1,0 +1,36 @@
+enableVersioning: true
+handle: diensten
+name: Diensten
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  6de046f0-6167-4af1-aa91-ffaf83e36a14: # NL
+    enabledByDefault: true
+    hasUrls: true
+    template: _diensten/_entry
+    uriFormat: 'diensten/{slug}'
+  e57cf13b-f9cb-484a-8093-a897fa43eb68: # EN
+    enabledByDefault: true
+    hasUrls: true
+    template: _diensten/_entry
+    uriFormat: 'diensten/{slug}'
+  fd2014b7-5bc0-49a9-ac30-e009081532f7: # FR
+    enabledByDefault: true
+    hasUrls: true
+    template: _diensten/_entry
+    uriFormat: 'diensten/{slug}'
+structure:
+  maxLevels: null
+  uid: a4f141fe-a647-4df7-b75c-37746fd437ce
+type: structure

@@ -15,10 +15,10 @@
 		<div class="container">
 			{% set count = 0 %}
 			{% set verhalen = craft.entries.section('verhalenDetail').all() %}
-			<div class="md:flex md:space-x-5">
+			<div class="md:flex md:flex-wrap md:-mx-5">
 				{% for verhaal in verhalen %}
 					{% set count = count +1 %}
-					<div class="{% if count is odd %}md:w-1/4 {% else %}md:w-3/4{% endif %}">
+					<div class="md:mx-5 mb-5 {% if count is odd %}md:w-1/4 {% else %}md:w-2/4{% endif %}">
 						<img src="{{ verhaal.image.one().url }}">
 						<div class="px-5 py-5 bg-light">
 							<h2 class="text-xl uppercase">{{ verhaal.title }}</h2>

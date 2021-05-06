@@ -17,7 +17,8 @@
 						<svg class="w-5 h-5 mr-2 text-white icon" aria-hidden="true">
 							<use xlink:href="/icon/sprite.svg#place"></use>
 						</svg>
-						{{ entry.startingPoint }}
+						{{ entry.adres.street }}, 
+						{{ entry.adres.city }}
 					</div>
 					{% include '_snippet/_content/_intro' %}
 					<a class="mt-10 btn btn--primary" href="{{ entry.cta }}">{{ entry.cta.getText() }}</a>

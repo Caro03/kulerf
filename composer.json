@@ -23,6 +23,7 @@
         "statikbe/craft-cta-field": "^1.0",
         "statikbe/craft-translate": "^1.0",
         "studioespresso/craft-dumper": "2.0.0",
+        "studioespresso/craft-easyaddressfield": "^3.0",
         "studioespresso/craft-navigate": "2.7.6",
         "studioespresso/craft-seo-fields": "1.2.3",
         "verbb/expanded-singles": "1.1.3",
