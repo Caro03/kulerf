@@ -1,5 +1,5 @@
 fieldLayouts:
-  ebbbd6f1-1fb2-4fcb-85b8-692b26c02590:
+  c25591ce-eb11-4fdd-99b1-b673e0f9b74f:
     tabs:
       -
         elements:
@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: b5de6dcf-80e6-48e2-b846-0dab7f35c4c8 # Intro Text
+            fieldUid: 56eddec2-0ea4-4353-8639-f0139a680555 # Monumenten
             instructions: null
             label: null
             required: false
@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 56d715d0-6a9d-4562-9c66-e5b4caad7f44 # Content Builder
+            fieldUid: 5819e444-055c-44e4-9336-b65afc01822c # Image1
             instructions: null
             label: null
             required: false
@@ -45,7 +45,16 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 7f11b693-69b8-4a48-add0-ab165ca30b51 # CTA Blok
+            fieldUid: 3e00d952-721e-4676-8257-b88422dfa976 # Image2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 18339376-302f-4dd4-a4b5-cc9b2f2247b1 # Image3
             instructions: null
             label: null
             required: false
@@ -55,10 +64,10 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: bezoek
+handle: slideShow
 hasTitleField: true
-name: Bezoek
-section: 07b107ed-6ab2-4989-990f-1994c82a304c # Bezoek
+name: 'Slide Show'
+section: a81c76bb-f7f7-439d-b502-990696aba0b2 # Slide Show
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

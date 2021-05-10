@@ -17,7 +17,7 @@
 						<svg class="w-5 h-5 mr-2 text-white icon" aria-hidden="true">
 							<use xlink:href="/icon/sprite.svg#place"></use>
 						</svg>
-						{{ entry.adres.street }}, 
+						{{ entry.adres.street }},
 						{{ entry.adres.city }}
 					</div>
 					{% include '_snippet/_content/_intro' %}
@@ -25,6 +25,37 @@
 					{% include '_snippet/_item/_walkDetail' %}
 				</div>
 			</div>
+		</div>
+	</div>
+
+	<div class="section section--default">
+		<div class="container">
+			{% set images = craft.entries.section('slideShow').relatedTo(entry.monumenten) %}
+			{% for image in images %}
+				<div class="-mx-2 md:flex md:flex-wrap">
+					{% if image.image1|length %}
+						<a class="block px-2 mb-2 overflow-hidden rounded md:h-64 md:w-1/3 js-modal-image" data-group="image-gallery" href="{{ image.image1.one().url }}">
+							<span class="sr-only">Show image gallery</span>
+							<img src="{{ image.image1.one().url }}" alt=""/>
+							<span></span>
+						</a>
+					{% endif %}
+
+					{% if image.image2|length %}
+						<a class="block px-2 mb-2 overflow-hidden rounded md:h-64 md:w-1/3 js-modal-image" data-group="image-gallery" href="{{ image.image2.one().url }}">
+							<span class="sr-only">Show image gallery</span>
+							<img src="{{ image.image2.one().url }}" alt=""/>
+						</a>
+					{% endif %}
+
+					{% if image.image3|length %}
+						<a class="block px-2 mb-2 overflow-hidden rounded md:h-64 md:w-1/3 js-modal-image" data-group="image-gallery" href="{{ image.image3.one().url }}">
+							<span class="sr-only">Show image gallery</span>
+							<img src="{{ image.image3.one().url }}" alt=""/>
+						</a>
+					{% endif %}
+				</div>
+			{% endfor %}
 		</div>
 	</div>
 
@@ -43,13 +74,13 @@
 			<h3>{{ 'Erfgoedwandelingen langs dit monument'|t }}</h3>
 			<div class="md:flex md:-mx-4">
 				{% for relatedEntry in craft.entries.section('walkDetail').relatedTo(entry.monumenten).id('not ' ~ entry.id).limit(3) %}
-                    {% include '_snippet/_item/_monumentDetail' %}
-                {% endfor %}
+					{% include '_snippet/_item/_monumentDetail' %}
+				{% endfor %}
 			</div>
-            {% set walks = craft.entries.section('walk').one() %}
-            <div class="text-center">
-            <a class="mt-5 font-bold text-black uppercase border-black btn btn--ghost" href="{{ walks.url }}">{{ 'Meer erfgoedwandelingen'|t }}</a>
-            </div>
+			{% set walks = craft.entries.section('walk').one() %}
+			<div class="text-center">
+				<a class="mt-5 font-bold text-black uppercase border-black btn btn--ghost" href="{{ walks.url }}">{{ 'Meer erfgoedwandelingen'|t }}</a>
+			</div>
 		</div>
 	</div>
 

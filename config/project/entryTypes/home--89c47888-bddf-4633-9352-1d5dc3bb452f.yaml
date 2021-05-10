@@ -36,7 +36,25 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: a83394b8-6631-4d09-8297-c46784b8ef0f
+            fieldUid: 166d5fe7-e341-4f42-aba6-a0711508e31c # CTA
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: a44287f8-d6ed-4f2c-8a63-0c1312ef236e # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7f11b693-69b8-4a48-add0-ab165ca30b51 # CTA Blok
             instructions: null
             label: null
             required: false
@@ -91,7 +109,7 @@ fieldLayouts:
         name: SEO
         sortOrder: 3
 handle: home
-hasTitleField: false
+hasTitleField: true
 name: Home
 section: 5611e98d-93ec-4bd4-95dd-18f282b8c5e8 # Home
 sortOrder: 1

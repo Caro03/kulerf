@@ -31,6 +31,15 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
+          -
+            fieldUid: 483feccd-8363-46de-b3ae-022e7430906c # Background
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
@@ -53,6 +62,18 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  483feccd-8363-46de-b3ae-022e7430906c: # Background
+    contentColumnType: string
+    fieldGroup: null
+    handle: background
+    instructions: ''
+    name: Background
+    searchable: false
+    settings:
+      dataSet: 'Background colors'
+    translationKeyFormat: null
+    translationMethod: none
+    type: statikbe\configvaluesfield\fields\ConfigValuesFieldField
   a658cb99-0d95-4a8a-9a19-86b2f328d9a4: # CTA
     contentColumnType: text
     fieldGroup: null

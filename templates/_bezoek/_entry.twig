@@ -12,15 +12,17 @@
 	</div>
 
 	{% include '_snippet/_content/_contentBuilder'
-    with {
-    settings : {
-        section: 'section',
-        container: 'container',
-    }
-        } %}
+	with {
+	settings : {
+		section: 'section',
+		container: 'container',
+	}
+		} %}
+
+	{% include '_snippet/_content/_ctaBlok' %}
 
 	{% set bezoeken = craft.entries.section('bezoekDetail') %}
-	{% paginate bezoeken.limit(2) as load1PageInfo, load1Entries %}
+	{% paginate bezoeken.limit(3) as load1PageInfo, load1Entries %}
 
 		<div class="section section--default" id="loader1">
 			<div class="container">

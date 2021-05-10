@@ -1,31 +1,94 @@
 {% extends "_layout" %}
 
 {% block content %}
-    
-    <div class="section section--default">
-        <div class="container">
-            <div class="w-full md:w-3/4">
-                {% include '_snippet/_content/_intro' %}
-            </div>
-        </div>
-    </div>
-    <div class="section section--default">
-        <div class="container">
-            {% set walks = craft.entries.section('walk').all() %}
-            {% for walk in walks %}
-                <a href="{{ walk.url }}">walk</a>
-            {% endfor %}
 
-            {% set collecties = craft.entries.section('collectieDetail').all() %}
-            {% for collectie in collecties %}
-                <a href="{{ collectie.url }}">coll</a>
-            {% endfor %}
+	<div class="px-10 py-10 bg-center bg-cover hero bg-light js-bg-target">
+		<div class="section section--default">
+			<div class="container">
+				{% include '_snippet/_item/_home' %}
+				<div class="w-full md:w-2/4">
+					<div class="px-10 py-10 bg-white bg-opacity-0">
+						{% include '_snippet/_content/_pageTitle' %}
+						{% include '_snippet/_content/_intro' %}
+						<div class="mt-5">
+							{{ entry.cta.getLink() }}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-            {% set verhalen = craft.entries.section('verhalenDetail').all() %}
-            {% for verhaal in verhalen %}
-                <a href="{{ verhaal.url }}">verhaal</a>
-            {% endfor %}
-        </div>
-    </div>
+	<div class="section section--default">
+		<div class="container">
+			<h2>{{ '3 erfgoedparels om te bezoeken'|t }}</h2>
+			<div class="md:-mx-4 md:flex md:flex-wrap">
+				{% set monuments = craft.entries.section('monumentDetail').limit(3) %}
+				{% for monu in monuments %}
+					{% include '_snippet/_item/_monument' %}
+				{% endfor %}
+			</div>
+			{% set monuments = craft.entries.section('monument').one() %}
+			<div class="text-center">
+				<a class="mt-5 font-bold text-black uppercase border-black btn btn--ghost" href="{{ monuments.url }}">{{ 'Meer gebouwen en monumenten'|t }}</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section--default">
+		<div class="container">
+			<h2>{{ 'Erfgoedverhalen'|t }}</h2>
+			<div class="md:-mx-3 md:flex md:flex-wrap">
+				{% set count = 0 %}
+				{% set stories = craft.entries.section('verhalenDetail').limit(2) %}
+				{% for story in stories %}
+					{% set count = count +1 %}
+					<div class="md:px-3 mb-5 {% if count is odd %}md:w-1/3 {% else %}md:w-2/3{% endif %}">
+						<img src="{{ story.image.one().url }}">
+						<div class="px-5 py-5 bg-light">
+							<h2 class="text-xl uppercase">{{ story.title }}</h2>
+							<div class="mb-5">
+								{{ story.intro }}
+							</div>
+							<a class="mt-5 font-bold text-black uppercase border-black btn btn--ghost" href="{{ story.url }}">{{ 'Verhaal lezen'|t }}</a>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+			{% set stories = craft.entries.section('verhalen').one() %}
+			<div class="text-center">
+				<a class="mt-5 font-bold text-black uppercase border-black btn btn--ghost" href="{{ stories.url }}">{{ 'Meer erfgoedverhalen'|t }}</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="section section--default">
+		<div class="container">
+			<div class="md:mt-5 md:-mx-5 md:flex md:flex-wrap">
+				<div class="w-full md:w-1/2 md:px-5">
+					<div class="h-full px-10 py-10 bg-light">
+						<h2>{{ 'Collecties'|t }}</h2>
+						{% set collections = craft.entries.section('collectie').one() %}
+						{{ collections.intro }}
+						<div>
+							<a class="mt-5 btn btn--primary" href="{{ collections.url }}">{{ 'Collecties bekijken'|t }}</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="w-full md:w-1/2 md:px-5">
+					<div class="h-full px-10 py-10 bg-light">
+						<h2>{{ 'Erfgoedwandelingen'|t }}</h2>
+						{% set walks = craft.entries.section('walk').one() %}
+						{{ walks.intro }}
+						<div>
+							<a class="mt-5 btn btn--primary" href="{{ walks.url }}">{{ 'Wandelingen bekijken'|t }}</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 {% endblock %}

@@ -1,0 +1,13 @@
+{% set optimizedImage = entry.image|first.optimizedOverview %}
+<picture>
+    {% if craft.imageOptimize.serverSupportsWebP() and entry.image|first.extension != 'svg' %}
+        <source data-srcset="{{ optimizedImage.srcsetWebP() }}"
+                sizes="(max-width: 479px) 99vw, (min-width: 480px) and (max-width: 659px) 431px, (min-width: 660px) and (max-width: 819px) 214px, (min-width: 820px) and (max-width: 979px) 252px, (min-width: 980px) and (max-width: 1199px) 327px, (min-width: 1200px) 395px"
+                type="image/webp"/>
+    {% endif %}
+    <img src="{{ optimizedImage.placeholderBox() }}"
+        data-srcset="{{ optimizedImage.srcset() }}"
+        sizes="(max-width: 479px) 94vw, (min-width: 480px) and (max-width: 659px) 431px, (min-width: 660px) and (max-width: 819px) 214px, (min-width: 820px) and (max-width: 979px) 252px, (min-width: 980px) and (max-width: 1199px) 327px, (min-width: 1200px) 395px"
+        alt="{{ entry.image|first.imageCaption ?? entry.image|first.title ?? entry.title }}"
+        class="lazyload sr-only js-bg-src"/>
+</picture>

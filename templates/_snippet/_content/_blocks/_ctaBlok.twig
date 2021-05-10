@@ -1,16 +1,20 @@
+{% set bgDefault = block.background == 'section--default' ? '' : '' %}
+{% set bgPrimary = block.background == 'section--primary' ? 'bg-primary' : '' %}
+{% set bgLight = block.background == 'section--light' ? 'bg-light' : '' %}
+
 <div class="section section--default">
 	<div class="container">
-		<div class="px-10 py-10 text-white bg-primary">
-			<div class="mb-5 text-xl font-bold uppercase">
+		<div class="{% if bgLight %}{{ bgLight }} py-10 px-10 {% endif %} {% if bgPrimary %}{{ bgPrimary }} py-10 px-10 {% endif %}">
+			<div class="mb-5 text-xl font-bold uppercase {% if bgPrimary %}text-white{% endif %}">
 				{{ block.titel }}
 			</div>
 
-			<div class="w-3/4 mb-5">
+			<div class="w-3/4 mb-5 {% if bgPrimary %}text-white{% endif %}">
 				{{ block.intro }}
 			</div>
 
 			<div>
-				<a class="btn btn--ghost" href="{{ block.cta }}">{{ block.cta.getText() }}</a>
+				<a class="{% if bgLight %}btn btn--primary{% endif %} {% if bgPrimary %}btn btn--ghost{% endif %}" href="{{ block.cta }}">{{ block.cta.getText() }}</a>
 			</div>
 		</div>
 	</div>
