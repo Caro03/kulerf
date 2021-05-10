@@ -21,7 +21,7 @@
 
 	<div class="section section--default">
 		<div class="container">
-			<h2>{{ '3 erfgoedparels om te bezoeken'|t }}</h2>
+			<h2 class="text-xl uppercase">{{ '3 erfgoedparels om te bezoeken'|t }}</h2>
 			<div class="md:-mx-4 md:flex md:flex-wrap">
 				{% set monuments = craft.entries.section('monumentDetail').limit(3) %}
 				{% for monu in monuments %}
@@ -37,7 +37,7 @@
 
 	<div class="section section--default">
 		<div class="container">
-			<h2>{{ 'Erfgoedverhalen'|t }}</h2>
+			<h2 class="text-xl uppercase">{{ 'Erfgoedverhalen'|t }}</h2>
 			<div class="md:-mx-3 md:flex md:flex-wrap">
 				{% set count = 0 %}
 				{% set stories = craft.entries.section('verhalenDetail').limit(2) %}
@@ -67,7 +67,7 @@
 			<div class="md:mt-5 md:-mx-5 md:flex md:flex-wrap">
 				<div class="w-full md:w-1/2 md:px-5">
 					<div class="h-full px-10 py-10 bg-light">
-						<h2>{{ 'Collecties'|t }}</h2>
+						<h2 class="text-xl uppercase">{{ 'Collecties'|t }}</h2>
 						{% set collections = craft.entries.section('collectie').one() %}
 						{{ collections.intro }}
 						<div>
@@ -78,7 +78,7 @@
 
 				<div class="w-full md:w-1/2 md:px-5">
 					<div class="h-full px-10 py-10 bg-light">
-						<h2>{{ 'Erfgoedwandelingen'|t }}</h2>
+						<h2 class="text-xl uppercase">{{ 'Erfgoedwandelingen'|t }}</h2>
 						{% set walks = craft.entries.section('walk').one() %}
 						{{ walks.intro }}
 						<div>

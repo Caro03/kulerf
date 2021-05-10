@@ -1,0 +1,6 @@
+adminOnly: 1
+allowSources: '*'
+enabledSiteGroups: '*'
+handle: flyoutNav
+levels: 1
+title: FlyoutNav
