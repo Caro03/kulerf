@@ -85,13 +85,9 @@ module.exports = {
     },
   },
   variants: {
-    textColor: ['responsive', 'hover', 'focus', 'active'],
-    borderColor: ['responsive', 'hover', 'focus', 'active'],
-    borderOpacity: ['responsive', 'hover', 'focus', 'active'],
-    borderRadius: ['responsive', 'active'],
-    borderStyle: ['responsive', 'active'],
-    borderWidth: ['responsive', 'active'],
-    backgroundColor: ['responsive', 'hover', 'focus', 'active'],
+    textDecoration: ({ after }) => after(['group-hover']),
+    backgroundColor: ({ after }) => after(['group-hover']),
+    borderColor: ({ after }) => after(['group-hover']),
   },
   plugins: [
     colorShade(siteColors),
