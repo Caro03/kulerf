@@ -15,11 +15,11 @@
 	<div class="py-6 footer">
 		<div class="container">
 			<div class="flex flex-wrap justify-between">
-				<div class="flex flex-row items-center space-x-5">
-					<a href="{{ siteUrl }}" class="">
+				<div class="flex flex-col items-center space-x-5 sm:flex-row">
+					<a href="{{ siteUrl }}" class="mb-5 sm:mb-0">
 						{{ svg('@webroot/img/logo.svg')|attr({ class: 'w-32 max-w-logo' }) }}
 					</a>
-					<span>&copy;
+					<span class="mb-5 sm:mb-0">&copy;
 						{{ now|date('Y') }}
 						{{ systemName }}
 						- Built with
