@@ -7,7 +7,7 @@
 			<div class="container">
 				{% include '_snippet/_item/_home' %}
 				<div class="w-full md:w-2/4">
-					<div class="px-10 py-10 bg-white bg-opacity-0">
+					<div class="px-10 py-10 bg-white bg-opacity-75">
 						{% include '_snippet/_content/_pageTitle' %}
 						{% include '_snippet/_content/_intro' %}
 						<div class="mt-5">
@@ -78,7 +78,7 @@
 
 				<div class="w-full md:w-1/2 md:px-5">
 					<div class="h-full px-10 py-10 bg-light">
-						<h2 class="text-xl uppercase">{{ 'Erfgoedwandelingen'|t }}</h2>
+						<h2 class="text-lg uppercase sm:text-xl">{{ 'Erfgoedwandelingen'|t }}</h2>
 						{% set walks = craft.entries.section('walk').one() %}
 						{{ walks.intro }}
 						<div>

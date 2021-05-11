@@ -14,8 +14,8 @@
 	<div class="section section--default">
 		<div class="container">
 			{% set monument = craft.entries.section('monumentDetail').all() %}
-			<a class="mr-5 font-bold uppercase pb-5 text-primary border-b-4 border-primary {% if craft.app.request.getQueryParam('monument') == 1 %}text-tertiair border-none{% endif %}" href="{{ entry.url }}">{{ 'Alfabetisch weergeven'|t }}</a>
-			<a class="font-bold uppercase {% if craft.app.request.getQueryParam('monument') == 1 %}pb-5 text-primary border-b-4 border-primary{% endif %}" href="/monument?monument=1">{{ 'Weergeven op kaart'|t }}</a>
+			<a class="mr-5 font-bold uppercase pb-5 text-primary md:border-b-4 border-primary {% if craft.app.request.getQueryParam('monument') == 1 %}text-tertiair border-none{% endif %}" href="{{ entry.url }}">{{ 'Alfabetisch weergeven'|t }}</a>
+			<a class="font-bold uppercase {% if craft.app.request.getQueryParam('monument') == 1 %}pb-5 text-primary md:border-b-4 border-primary{% endif %}" href="/monument?monument=1">{{ 'Weergeven op kaart'|t }}</a>
 			<div class="mt-5 border-b-2 border-gray-500"></div>
 		</div>
 	</div>

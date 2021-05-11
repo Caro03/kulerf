@@ -47,7 +47,7 @@
 	<div class="section section--default">
 		<div class="container">
 			<h3>{{ 'Andere erfgoedverhalen die je misschien interesseren'|t }}</h3>
-			<div class="md:flex md:-mx-4">
+			<div class="md:flex md:flex-wrap md:-mx-4">
 				{% for relatedEntry in craft.entries.section('verhalenDetail').id('not ' ~ entry.id).limit(3) %}
 					{% include '_snippet/_item/_verhalenDetail' %}
 				{% endfor %}
