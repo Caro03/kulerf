@@ -13,7 +13,7 @@
 
 	<div class="section section--default">
 		<div class="container">
-			{% set gidsen = craft.entries.section('walkDetail').all() %}
+			{% set guides = craft.entries.section('walkDetail').all() %}
 			<a class="mr-5 font-bold uppercase pb-5 text-primary border-b-4 border-primary {% if craft.app.request.getQueryParam('gids') == 1 %}text-tertiair border-none{% endif %}" href="{{ entry.url }}">{{ 'Wandelingen met gids'|t }}</a>
 			<a class="font-bold uppercase {% if craft.app.request.getQueryParam('gids') == 1 %}pb-5 text-primary border-b-4 border-primary{% endif %}" href="/walk?gids=1">{{ 'Wandelingen met app'|t }}</a>
 			<div class="mt-5 border-b-2 border-gray-500"></div>
@@ -24,15 +24,15 @@
 		<div class="container">
 			<div class="md:-mx-4 md:flex md:flex-wrap">
 				{% if craft.app.request.getQueryParam('gids') == 1 %}
-					{% for gids in gidsen %}
-						{% if gids.switchApp == 1 %}
+					{% for guide in guides %}
+						{% if guide.switchApp == 1 %}
 							{% include '_snippet/_item/_walk' %}
 						{% endif %}
 					{% endfor %}
 
 				{% else %}
-					{% for gids in gidsen %}
-						{% if gids.switchApp == 0 %}
+					{% for guide in guides %}
+						{% if guide.switchApp == 0 %}
 							{% include '_snippet/_item/_walk' %}
 						{% endif %}
 					{% endfor %}

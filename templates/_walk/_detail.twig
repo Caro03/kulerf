@@ -93,9 +93,9 @@
 				{% endfor %}
 			</div>
 
-			{% set wandelingen = craft.entries.section('walk').one() %}
+			{% set walks = craft.entries.section('walk').one() %}
 			<div class="text-center">
-				<a class="mt-5 font-bold text-black uppercase border-black btn btn--ghost" href="{{ wandelingen.url }}">{{ 'Meer erfgoedwandelingen'|t }}</a>
+				<a class="mt-5 font-bold text-black uppercase border-black btn btn--ghost" href="{{ walks.url }}">{{ 'Meer erfgoedwandelingen'|t }}</a>
 			</div>
 
 		</div>

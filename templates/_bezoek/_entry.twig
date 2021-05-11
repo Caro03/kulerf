@@ -21,14 +21,14 @@
 
 	{% include '_snippet/_content/_ctaBlok' %}
 
-	{% set bezoeken = craft.entries.section('bezoekDetail') %}
-	{% paginate bezoeken.limit(3) as load1PageInfo, load1Entries %}
+	{% set visiting = craft.entries.section('bezoekDetail') %}
+	{% paginate visiting.limit(3) as load1PageInfo, load1Entries %}
 
 		<div class="section section--default" id="loader1">
 			<div class="container">
 				<h2 class="text-xl uppercase">{{ 'Nu te bezoeken'|t }}</h2>
 				<div class="md:-mx-4 md:flex md:flex-wrap js-pagination-container">
-					{% for bezoek in load1Entries %}
+					{% for visit in load1Entries %}
 						{% include '_snippet/_item/_bezoek' %}
 					{% endfor %}
 				</div>

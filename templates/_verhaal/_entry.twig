@@ -14,20 +14,20 @@
 	<div class="section section--default">
 		<div class="container">
 			{% set count = 0 %}
-			{% set verhalen = craft.entries.section('verhalenDetail').all() %}
+			{% set stories = craft.entries.section('verhalenDetail').all() %}
 			<div class="md:flex md:flex-wrap md:-mx-3">
-				{% for verhaal in verhalen %}
+				{% for story in stories %}
 					{% set count = count +1 %}
 					<div class="relative group md:px-3 mb-5 {% if count is odd %}md:w-1/3 {% else %}md:w-2/3{% endif %}">
-						<img src="{{ verhaal.image.one().url }}">
+						<img src="{{ story.image.one().url }}">
 						<div class="px-5 py-5 bg-light">
 							<h2 class="text-xl uppercase">
-								<a class="link--extended" href="{{ verhaal.url }}">{{ verhaal.title }}</a>
+								<a class="link--extended" href="{{ story.url }}">{{ story.title }}</a>
 							</h2>
 							<div class="mb-5">
-								{{ verhaal.intro }}
+								{{ story.intro }}
 							</div>
-							<a class="group-hover:bg-primary-hover group-hover:border-primary-hover btn btn--primary" href="{{ verhaal.url }}">{{ 'Verhaal lezen'|t }}</a>
+							<a class="group-hover:bg-primary-hover group-hover:border-primary-hover btn btn--primary" href="{{ story.url }}">{{ 'Verhaal lezen'|t }}</a>
 						</div>
 					</div>
 				{% endfor %}
